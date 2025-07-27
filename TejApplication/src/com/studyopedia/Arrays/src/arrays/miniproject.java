@@ -5,7 +5,7 @@ public class miniproject {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int[] arr= {1001,1002,1003,1004,1005,1006,1007};
-		int index=0;
+		int index=-1;
 		char ch1;
 		int n=0;
 		int k1=0;
@@ -13,11 +13,13 @@ public class miniproject {
 		System.out.print("java project1"+" ");
 		int k=sc.nextInt();
 		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
 			if(k==arr[i]) {
-				index++;
+				index=i;
 				s1=false;
 				k1=arr[i];
 				
+			}
 			}
 		}
 		if(!s1) {
@@ -29,11 +31,11 @@ public class miniproject {
 		System.out.println();
 		System.out.print(k1+"     ");
 		String[] s= {"Ashish","Sushma","Rahul","chahat","Ranjan","suman","tanmay"};
-        System.out.print(s[index+1]+"      ");
+        System.out.print(s[index]+"      ");
         String[] dep= {"R&D","PM","Acct","Front desk","Engg","Manufacturing","PM"};
-        System.out.print(dep[index+1]+"      ");
+        System.out.print(dep[index]+"      ");
         char []ch= {'e','c','k','r','m','e','c'};
-        ch1=ch[index+1];
+        ch1=ch[index];
         switch(ch1) {
         case 'e':
         	   System.out.print("Engineer"+"      ");
@@ -60,7 +62,7 @@ public class miniproject {
         int[] hra= {8000,12000,8000,6000,20000,9000,12000};
         int[] it= {3000,9000,1000,2000,20000,4400,10000};
       //  int[] da= {20000,32000,12000,15000,40000};
-        int salary=basic[index+1]+hra[index+1]+n-it[index+1];
+        int salary=basic[index]+hra[index]+n-it[index];
         System.out.print(salary);
 		}
         if(s1) {
